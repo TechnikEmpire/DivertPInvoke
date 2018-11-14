@@ -1,6 +1,10 @@
 # DivertPInvoke
 PInvoke wrapper for [WinDivert](https://github.com/basil00/Divert).  
   
+### Notice
+
+You may be interested in the fully-managed wrapper for WinDivert I've written, called [WinDivertSharp](https://github.com/TechnikEmpire/WinDivertSharp). It will be actively maintained, and this repository almost surely will not be.
+  
 Be mindful of the fact that the source file(s) in this repo are LGPLv3. Make sure you comply with this license (which is the same license as WinDivert).
 
 This class will append two directories to the env vars of the executing application. It will append `EXE\x86` and `EXE\x64`. This way, you can drop the WinDivert native executables in arch-specific directories next to your deployed application and keep using AnyCPU, and thanks to this little trick, the .NET assembly resolver will load the proper WinDivert native libraries.
